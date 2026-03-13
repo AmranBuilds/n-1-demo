@@ -43,5 +43,5 @@ st.bar_chart(chart_data)
 
 # ELI5 Explanation
 st.header("ELI5: Understanding the Chart")
-st.write("Look at the two bars above. The 'Required Demand' bar shows the exact amount of work you MUST finish today. The 'Surviving N-1 Capacity' bar shows the maximum amount of work your trucks can actually do after one truck breaks down.")
+st.write("The 'Required Demand' bar shows the exact amount of work you MUST finish today. The 'Surviving N-1 Capacity' bar shows the maximum amount of work your trucks can actually do after one truck breaks down.")
 st.write("For an N-1 system to succeed, the Capacity bar must be taller than (or exactly equal to) the Demand bar. If the Capacity bar is shorter, you do not have enough space left to carry all your boxes, and the system fails.")

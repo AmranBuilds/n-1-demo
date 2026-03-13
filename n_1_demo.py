@@ -22,6 +22,9 @@ st.latex(r"C_{normal} = N \times C")
 st.latex(r"C_{N-1} = (N - 1) \times C")
 st.latex(r"\text{Condition for Success: } C_{N-1} \ge D")
 
+# Variables definitions 
+st.write("N: The total number of trucks")
+st.write("C: The capacity of each truck")
 # Substituted Equations (Dynamic)
 st.write("Applied to these specific Variables:")
 st.latex(r"C_{normal} = " + f"{n_trucks} \\times {capacity} = {normal_capacity}")

@@ -4,3 +4,5 @@ This was a demo to both help me understand n-1 contingency planning (Math330 Lin
 I will be adding this to my Linked in to get practice with that as well. 
 
 I used Steamlit and Pandas to help visualize the concept.  
+
+https://n-1-demo-f8sm7cvon8po9chufu6lk7.streamlit.app/

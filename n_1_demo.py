@@ -25,6 +25,7 @@ st.latex(r"\text{Condition for Success: } C_{N-1} \ge D")
 # Variables definitions 
 st.write("N: The total number of trucks")
 st.write("C: The capacity of each truck")
+st.write("D: Total Daily Demand")
 # Substituted Equations (Dynamic)
 st.write("Applied to these specific Variables:")
 st.latex(r"C_{normal} = " + f"{n_trucks} \\times {capacity} = {normal_capacity}")

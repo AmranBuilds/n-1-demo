@@ -23,7 +23,7 @@ st.latex(r"C_{N-1} = (N - 1) \times C")
 st.latex(r"\text{Condition for Success: } C_{N-1} \ge D")
 
 # Substituted Equations (Dynamic)
-st.write("Applied to Your Variables:")
+st.write("Applied to these specific Variables:")
 st.latex(r"C_{normal} = " + f"{n_trucks} \\times {capacity} = {normal_capacity}")
 st.latex(r"C_{N-1} = " + f"({n_trucks} - 1) \\times {capacity} = {n_minus_1_capacity}")
 

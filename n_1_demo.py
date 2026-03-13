@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import streamlit as st
 import pandas as pd
 
@@ -16,16 +15,24 @@ normal_capacity = n_trucks * capacity
 n_minus_1_capacity = (n_trucks - 1) * capacity
 
 st.header("The Math")
-# LaTeX equations for visual representation of the math
-st.latex(r"C_{normal} = N \times C = " + f"{n_trucks} \\times {capacity} = {normal_capacity}")
-st.latex(r"C_{N-1} = (N - 1) \times C = " + f"({n_trucks} - 1) \\times {capacity} = {n_minus_1_capacity}")
+
+# General Equations (Static)
+st.write("General Formula:")
+st.latex(r"C_{normal} = N \times C")
+st.latex(r"C_{N-1} = (N - 1) \times C")
+st.latex(r"\text{Condition for Success: } C_{N-1} \ge D")
+
+# Substituted Equations (Dynamic)
+st.write("Applied to Your Variables:")
+st.latex(r"C_{normal} = " + f"{n_trucks} \\times {capacity} = {normal_capacity}")
+st.latex(r"C_{N-1} = " + f"({n_trucks} - 1) \\times {capacity} = {n_minus_1_capacity}")
 
 # Conditional logic for N-1 status
 if n_minus_1_capacity >= demand:
-    st.latex(r"C_{N-1} \ge D \rightarrow " + f"{n_minus_1_capacity} \ge {demand}")
+    st.latex(f"{n_minus_1_capacity} \ge {demand}")
     st.success(f"PASS: The remaining {n_trucks - 1} trucks can carry the {demand} units of demand.")
 else:
-    st.latex(r"C_{N-1} < D \rightarrow " + f"{n_minus_1_capacity} < {demand}")
+    st.latex(f"{n_minus_1_capacity} < {demand}")
     deficit = demand - n_minus_1_capacity
     st.error(f"FAIL: The remaining {n_trucks - 1} trucks fall short. You will fail to deliver {deficit} units.")
 
